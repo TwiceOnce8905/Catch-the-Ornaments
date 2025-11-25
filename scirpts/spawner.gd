@@ -19,20 +19,8 @@ var max_x := 950
 var min_y := -410
 var max_y := -260
 
-func _ready():
+func _on_timer_timeout():
 	spawn_ornament()
-	spawn_ornament()
-	spawn_ornament()
-	spawn_ornament()
-	spawn_ornament()
-	spawn_ornament()
-	spawn_ornament()
-	spawn_ornament()
-	spawn_ornament()
-	spawn_ornament()
-	spawn_ornament()
-	spawn_ornament()
-
 
 # in the name of the function I don't know why you want to look at this comment anyways hi
 func spawn_ornament():

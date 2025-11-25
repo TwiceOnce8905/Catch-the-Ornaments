@@ -1,10 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://cjvtdvtiw56dv"]
+[gd_scene load_steps=3 format=3 uid="uid://cjvtdvtiw56dv"]
 
+[ext_resource type="Script" uid="uid://tdvxxjb66yx0" path="res://scirpts/pinkorn.gd" id="1_5lw20"]
 [ext_resource type="Texture2D" uid="uid://q3jggyi2ih7m" path="res://Godot assests/sprites/pinkorn.png" id="1_aogc7"]
 
 [node name="pinkorn" type="Node2D"]
+script = ExtResource("1_5lw20")
 
 [node name="pink" type="Sprite2D" parent="."]
-position = Vector2(0, -50)
-scale = Vector2(5, 5)
+position = Vector2(0, -40)
+scale = Vector2(4, 4)
 texture = ExtResource("1_aogc7")

@@ -1,10 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://dgnpixqspg1yc"]
+[gd_scene load_steps=3 format=3 uid="uid://dgnpixqspg1yc"]
 
 [ext_resource type="Texture2D" uid="uid://ct4lyfp6mq51k" path="res://Godot assests/sprites/greenorn.png" id="1_3ik4u"]
+[ext_resource type="Script" uid="uid://poisx7bqohyo" path="res://scirpts/greenorn.gd" id="1_yk7da"]
 
 [node name="greenorn" type="Node2D"]
+script = ExtResource("1_yk7da")
 
 [node name="green" type="Sprite2D" parent="."]
-position = Vector2(0, -50)
-scale = Vector2(5, 5)
+position = Vector2(0, -40)
+scale = Vector2(4, 4)
 texture = ExtResource("1_3ik4u")

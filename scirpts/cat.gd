@@ -28,4 +28,5 @@ func _physics_process(delta):
 	elif direction < 0:
 		catani.flip_h = true
 
+
 	move_and_slide()

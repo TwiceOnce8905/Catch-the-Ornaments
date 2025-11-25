@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dnxxerdgvfalu"]
+[gd_scene load_steps=7 format=3 uid="uid://dnxxerdgvfalu"]
 
 [ext_resource type="PackedScene" uid="uid://bxfon8htgq3nt" path="res://scenes/cat.tscn" id="1_i8va4"]
 [ext_resource type="Script" uid="uid://vlvgc4v4jeb1" path="res://scirpts/spawner.gd" id="1_jxvlb"]
@@ -8,6 +8,8 @@
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2sw64"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ymkym"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jxvlb"]
 
 [node name="maingame" type="Node2D"]
 
@@ -34,7 +36,19 @@ shape = SubResource("WorldBoundaryShape2D_ymkym")
 [node name="spawner" type="Node2D" parent="."]
 script = ExtResource("1_jxvlb")
 
+[node name="Timer" type="Timer" parent="spawner"]
+autostart = true
+
 [node name="cat" parent="." instance=ExtResource("1_i8va4")]
 position = Vector2(-3, 561)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(194, 589)
+shape = SubResource("WorldBoundaryShape2D_jxvlb")
+
+[connection signal="timeout" from="spawner/Timer" to="spawner" method="_on_timer_timeout"]
+[connection signal="area_entered" from="Area2D" to="spawner" method="_on_area_2d_area_entered"]

@@ -1,10 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://beaa62ash1k7a"]
+[gd_scene load_steps=3 format=3 uid="uid://beaa62ash1k7a"]
 
 [ext_resource type="Texture2D" uid="uid://b26e27tk4fv3g" path="res://Godot assests/sprites/redorn.png" id="1_70ro6"]
+[ext_resource type="Script" uid="uid://djxb1w8www1cm" path="res://scirpts/redorn.gd" id="1_jyy07"]
 
 [node name="redorn" type="Node2D"]
+script = ExtResource("1_jyy07")
 
 [node name="red" type="Sprite2D" parent="."]
-position = Vector2(0, -50)
-scale = Vector2(5, 5)
+position = Vector2(0, -40)
+scale = Vector2(4, 4)
 texture = ExtResource("1_70ro6")
