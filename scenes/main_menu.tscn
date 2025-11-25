@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3d6ol2v1mf2b"]
+
+[ext_resource type="Script" uid="uid://wwlej0unxbpo" path="res://scirpts/main_menu.gd" id="1_ekxnf"]
+[ext_resource type="FontFile" uid="uid://b5566bcqt5awo" path="res://Godot assests/fonts/PixelOperator8-Bold.ttf" id="1_l6cm7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l6cm7"]
+bg_color = Color(0.5986898, 0.88039565, 0, 1)
+
+[node name="main menu" type="Control"]
+modulate = Color(0.2877859, 0.8808774, 1, 1)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ekxnf")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 650.0
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 29.0
+offset_right = 840.0
+offset_bottom = 263.0
+color = Color(0.81359994, 1.4535487e-05, 0.5466669, 1)
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0.46970338, 0.8268564, 1.540184e-06, 1)
+layout_mode = 0
+offset_left = 298.0
+offset_top = 37.0
+offset_right = 851.0
+offset_bottom = 250.0
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 50
+text = "Random Test Game I Made off a Tutorial!"
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 269.0
+offset_right = 884.0
+offset_bottom = 378.0
+theme_override_colors/font_color = Color(0.5041587, 0.34088334, 1, 1)
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_l6cm7")
+text = "START!"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

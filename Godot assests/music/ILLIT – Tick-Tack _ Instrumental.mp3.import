@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://buf68ejq5s0ur"
+path="res://.godot/imported/ILLIT – Tick-Tack _ Instrumental.mp3-8388dd7800a0d8aa8f01736a44f4b808.mp3str"
+
+[deps]
+
+source_file="res://Godot assests/music/ILLIT – Tick-Tack _ Instrumental.mp3"
+dest_files=["res://.godot/imported/ILLIT – Tick-Tack _ Instrumental.mp3-8388dd7800a0d8aa8f01736a44f4b808.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

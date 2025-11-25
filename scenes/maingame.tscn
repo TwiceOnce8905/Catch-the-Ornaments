@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://dnxxerdgvfalu"]
+
+[ext_resource type="PackedScene" uid="uid://bxfon8htgq3nt" path="res://scenes/cat.tscn" id="1_i8va4"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7h15q"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2sw64"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ymkym"]
+
+[sub_resource type="Environment" id="Environment_i8va4"]
+fog_enabled = true
+fog_light_energy = 12.53
+
+[node name="maingame" type="Node2D"]
+
+[node name="floor" type="StaticBody2D" parent="."]
+
+[node name="floorcoll" type="CollisionShape2D" parent="floor"]
+position = Vector2(2, 554)
+shape = SubResource("WorldBoundaryShape2D_7h15q")
+
+[node name="wallr" type="StaticBody2D" parent="."]
+
+[node name="wallrcoll" type="CollisionShape2D" parent="wallr"]
+position = Vector2(965, 100)
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_2sw64")
+
+[node name="walll" type="StaticBody2D" parent="."]
+
+[node name="walllcoll" type="CollisionShape2D" parent="walll"]
+position = Vector2(-944, 111)
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_ymkym")
+
+[node name="cat" parent="." instance=ExtResource("1_i8va4")]
+position = Vector2(-3, 561)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_i8va4")

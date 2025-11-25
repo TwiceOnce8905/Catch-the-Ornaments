@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://g3xrpfs43hdf"]
+
+[ext_resource type="AudioStream" uid="uid://cby7l4628ybgh" path="res://Godot assests/music/ILLIT – 밤소풍 (bamsopoong) _ Instrumental.mp3" id="1_glrsj"]
+
+[node name="bamsopoong" type="AudioStreamPlayer"]
+stream = ExtResource("1_glrsj")
+autoplay = true
+bus = &"music"
