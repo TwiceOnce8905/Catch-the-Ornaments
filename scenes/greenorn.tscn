@@ -5,5 +5,6 @@
 [node name="greenorn" type="Node2D"]
 
 [node name="green" type="Sprite2D" parent="."]
-position = Vector2(0, -10)
+position = Vector2(0, -50)
+scale = Vector2(5, 5)
 texture = ExtResource("1_3ik4u")

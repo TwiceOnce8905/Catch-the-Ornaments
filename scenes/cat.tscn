@@ -104,6 +104,7 @@ animations = [{
 size = Vector2(144, 93)
 
 [node name="cat" type="CharacterBody2D"]
+z_index = 1
 script = ExtResource("1_se5fe")
 
 [node name="catani" type="AnimatedSprite2D" parent="."]
@@ -112,7 +113,7 @@ scale = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_l5p5i")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.041190423
+frame_progress = 0.3082251
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(8, -54.5)
