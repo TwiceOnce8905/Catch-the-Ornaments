@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgnpixqspg1yc"]
+
+[ext_resource type="Texture2D" uid="uid://ct4lyfp6mq51k" path="res://Godot assests/sprites/greenorn.png" id="1_3ik4u"]
+
+[node name="greenorn" type="Node2D"]
+
+[node name="green" type="Sprite2D" parent="."]
+position = Vector2(0, -10)
+texture = ExtResource("1_3ik4u")

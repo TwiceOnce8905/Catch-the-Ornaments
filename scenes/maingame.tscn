@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dnxxerdgvfalu"]
+[gd_scene load_steps=5 format=3 uid="uid://dnxxerdgvfalu"]
 
 [ext_resource type="PackedScene" uid="uid://bxfon8htgq3nt" path="res://scenes/cat.tscn" id="1_i8va4"]
 
@@ -7,10 +7,6 @@
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2sw64"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ymkym"]
-
-[sub_resource type="Environment" id="Environment_i8va4"]
-fog_enabled = true
-fog_light_energy = 12.53
 
 [node name="maingame" type="Node2D"]
 
@@ -38,6 +34,3 @@ shape = SubResource("WorldBoundaryShape2D_ymkym")
 position = Vector2(-3, 561)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_i8va4")

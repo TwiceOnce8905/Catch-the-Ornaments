@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://f1ofoqf4um34"]
+
+[ext_resource type="Texture2D" uid="uid://bi3binnucypcm" path="res://Godot assests/sprites/yelloworn.png" id="1_fxcuq"]
+
+[node name="yelloworn" type="Node2D"]
+
+[node name="yellow" type="Sprite2D" parent="."]
+position = Vector2(0, -10)
+texture = ExtResource("1_fxcuq")

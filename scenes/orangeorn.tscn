@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://det0b3fu4j1i7"]
+
+[ext_resource type="Texture2D" uid="uid://cvbh82gfk4wkr" path="res://Godot assests/sprites/orangeorn.png" id="1_nww7x"]
+
+[node name="orangeorn" type="Node2D"]
+
+[node name="orange" type="Sprite2D" parent="."]
+position = Vector2(0, -10)
+texture = ExtResource("1_nww7x")

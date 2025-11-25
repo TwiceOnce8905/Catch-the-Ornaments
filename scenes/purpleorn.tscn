@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3qufy6io8lrv"]
+
+[ext_resource type="Texture2D" uid="uid://do50qellbv41u" path="res://Godot assests/sprites/purpleorn.png" id="1_40cik"]
+
+[node name="purpleorn" type="Node2D"]
+
+[node name="purple" type="Sprite2D" parent="."]
+position = Vector2(0, -10)
+texture = ExtResource("1_40cik")
