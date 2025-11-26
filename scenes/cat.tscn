@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bxfon8htgq3nt"]
+[gd_scene load_steps=18 format=3 uid="uid://bxfon8htgq3nt"]
 
 [ext_resource type="Texture2D" uid="uid://6ltoyijms0xc" path="res://Godot assests/sprites/greywbarfixed.png" id="1_myi5k"]
 [ext_resource type="Script" uid="uid://jrockb4o6v0v" path="res://scirpts/cat.gd" id="1_se5fe"]
@@ -103,6 +103,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_myi5k"]
 size = Vector2(144, 93)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_se5fe"]
+size = Vector2(157, 215)
+
 [node name="cat" type="CharacterBody2D"]
 z_index = 1
 script = ExtResource("1_se5fe")
@@ -113,8 +116,16 @@ scale = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_l5p5i")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.3082251
+frame_progress = 0.22920083
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(8, -54.5)
 shape = SubResource("RectangleShape2D_myi5k")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(8.5, -115.5)
+shape = SubResource("RectangleShape2D_se5fe")

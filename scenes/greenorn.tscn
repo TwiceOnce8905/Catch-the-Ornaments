@@ -1,12 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://dgnpixqspg1yc"]
+[gd_scene load_steps=4 format=3 uid="uid://dgnpixqspg1yc"]
 
 [ext_resource type="Texture2D" uid="uid://ct4lyfp6mq51k" path="res://Godot assests/sprites/greenorn.png" id="1_3ik4u"]
 [ext_resource type="Script" uid="uid://poisx7bqohyo" path="res://scirpts/greenorn.gd" id="1_yk7da"]
 
-[node name="greenorn" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_yk7da"]
+radius = 30.0
+
+[node name="greenorn" type="Area2D"]
+collision_layer = 4
+collision_mask = 2
 script = ExtResource("1_yk7da")
 
 [node name="green" type="Sprite2D" parent="."]
 position = Vector2(0, -40)
 scale = Vector2(4, 4)
 texture = ExtResource("1_3ik4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -30)
+shape = SubResource("CircleShape2D_yk7da")

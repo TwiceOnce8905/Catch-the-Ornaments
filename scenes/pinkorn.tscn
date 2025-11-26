@@ -1,12 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://cjvtdvtiw56dv"]
+[gd_scene load_steps=4 format=3 uid="uid://cjvtdvtiw56dv"]
 
 [ext_resource type="Script" uid="uid://tdvxxjb66yx0" path="res://scirpts/pinkorn.gd" id="1_5lw20"]
 [ext_resource type="Texture2D" uid="uid://q3jggyi2ih7m" path="res://Godot assests/sprites/pinkorn.png" id="1_aogc7"]
 
-[node name="pinkorn" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_5lw20"]
+radius = 30.016663
+
+[node name="pinkorn" type="Area2D"]
+collision_layer = 4
+collision_mask = 2
 script = ExtResource("1_5lw20")
 
 [node name="pink" type="Sprite2D" parent="."]
 position = Vector2(0, -40)
 scale = Vector2(4, 4)
 texture = ExtResource("1_aogc7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -30)
+shape = SubResource("CircleShape2D_5lw20")

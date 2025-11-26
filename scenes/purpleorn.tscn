@@ -1,12 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://b3qufy6io8lrv"]
+[gd_scene load_steps=4 format=3 uid="uid://b3qufy6io8lrv"]
 
 [ext_resource type="Texture2D" uid="uid://do50qellbv41u" path="res://Godot assests/sprites/purpleorn.png" id="1_40cik"]
 [ext_resource type="Script" uid="uid://drpbpre3husr3" path="res://scirpts/purpleorn.gd" id="1_vn1e8"]
 
-[node name="purpleorn" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_vn1e8"]
+radius = 30.016663
+
+[node name="purpleorn" type="Area2D"]
+collision_layer = 4
+collision_mask = 2
 script = ExtResource("1_vn1e8")
 
 [node name="purple" type="Sprite2D" parent="."]
 position = Vector2(0, -40)
 scale = Vector2(4, 4)
 texture = ExtResource("1_40cik")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -30)
+shape = SubResource("CircleShape2D_vn1e8")

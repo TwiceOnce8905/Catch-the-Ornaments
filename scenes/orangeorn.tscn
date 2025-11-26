@@ -1,12 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://det0b3fu4j1i7"]
+[gd_scene load_steps=4 format=3 uid="uid://det0b3fu4j1i7"]
 
 [ext_resource type="Script" uid="uid://bds1xk4ime8cn" path="res://scirpts/orangeorn.gd" id="1_g04nm"]
 [ext_resource type="Texture2D" uid="uid://cvbh82gfk4wkr" path="res://Godot assests/sprites/orangeorn.png" id="1_nww7x"]
 
-[node name="orangeorn" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_g04nm"]
+radius = 30.0
+
+[node name="orangeorn" type="Area2D"]
+collision_layer = 4
+collision_mask = 2
 script = ExtResource("1_g04nm")
 
 [node name="orange" type="Sprite2D" parent="."]
 position = Vector2(0, -40)
 scale = Vector2(4, 4)
 texture = ExtResource("1_nww7x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -30)
+shape = SubResource("CircleShape2D_g04nm")
