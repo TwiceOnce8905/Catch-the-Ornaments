@@ -1,7 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dnxxerdgvfalu"]
+[gd_scene load_steps=10 format=3 uid="uid://dnxxerdgvfalu"]
 
 [ext_resource type="PackedScene" uid="uid://bxfon8htgq3nt" path="res://scenes/cat.tscn" id="1_i8va4"]
 [ext_resource type="Script" uid="uid://vlvgc4v4jeb1" path="res://scirpts/spawner.gd" id="1_jxvlb"]
+[ext_resource type="Script" uid="uid://cauw37gp4x5g3" path="res://scirpts/timeandscore.gd" id="3_nx2sv"]
+[ext_resource type="FontFile" uid="uid://b5566bcqt5awo" path="res://Godot assests/fonts/PixelOperator8-Bold.ttf" id="4_nx2sv"]
+[ext_resource type="Script" uid="uid://bxp8tklktwix7" path="res://scirpts/start.gd" id="5_hiawh"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7h15q"]
 
@@ -13,22 +16,24 @@
 
 [node name="maingame" type="Node2D"]
 
-[node name="floor" type="StaticBody2D" parent="."]
+[node name="walls" type="Node" parent="."]
 
-[node name="floorcoll" type="CollisionShape2D" parent="floor"]
+[node name="floor" type="StaticBody2D" parent="walls"]
+
+[node name="floorcoll" type="CollisionShape2D" parent="walls/floor"]
 position = Vector2(2, 554)
 shape = SubResource("WorldBoundaryShape2D_7h15q")
 
-[node name="wallr" type="StaticBody2D" parent="."]
+[node name="wallr" type="StaticBody2D" parent="walls"]
 
-[node name="wallrcoll" type="CollisionShape2D" parent="wallr"]
+[node name="wallrcoll" type="CollisionShape2D" parent="walls/wallr"]
 position = Vector2(965, 100)
 rotation = -1.5707964
 shape = SubResource("WorldBoundaryShape2D_2sw64")
 
-[node name="walll" type="StaticBody2D" parent="."]
+[node name="walll" type="StaticBody2D" parent="walls"]
 
-[node name="walllcoll" type="CollisionShape2D" parent="walll"]
+[node name="walllcoll" type="CollisionShape2D" parent="walls/walll"]
 position = Vector2(-944, 111)
 rotation = 1.5707964
 shape = SubResource("WorldBoundaryShape2D_ymkym")
@@ -37,7 +42,7 @@ shape = SubResource("WorldBoundaryShape2D_ymkym")
 script = ExtResource("1_jxvlb")
 
 [node name="Timer" type="Timer" parent="spawner"]
-wait_time = 0.5
+wait_time = 0.25
 autostart = true
 
 [node name="cat" parent="." instance=ExtResource("1_i8va4")]
@@ -53,5 +58,77 @@ collision_mask = 0
 position = Vector2(194, 589)
 shape = SubResource("WorldBoundaryShape2D_jxvlb")
 
+[node name="timeandscore" type="Node" parent="."]
+script = ExtResource("3_nx2sv")
+
+[node name="Timer" type="Timer" parent="timeandscore"]
+wait_time = 12.0
+one_shot = true
+
+[node name="Label" type="Label" parent="timeandscore/Timer"]
+offset_left = -966.0
+offset_top = -542.0
+offset_right = -147.0
+offset_bottom = -403.0
+theme_override_colors/font_color = Color(0.75468147, 0, 0.16176972, 1)
+theme_override_colors/font_outline_color = Color(3.6098064e-07, 0.45660985, 0.2132118, 1)
+theme_override_constants/outline_size = 40
+theme_override_fonts/font = ExtResource("4_nx2sv")
+theme_override_font_sizes/font_size = 112
+text = "⏱️:"
+autowrap_mode = 2
+
+[node name="Label" type="Label" parent="timeandscore"]
+offset_left = 5.0
+offset_top = -531.0
+offset_right = 1033.0
+offset_bottom = -439.0
+theme_override_colors/font_color = Color(0, 0.5366371, 0.18669936, 1)
+theme_override_colors/font_outline_color = Color(0.6336448, 0, 0.13778758, 1)
+theme_override_constants/outline_size = 40
+theme_override_fonts/font = ExtResource("4_nx2sv")
+theme_override_font_sizes/font_size = 80
+text = "Points:"
+autowrap_mode = 2
+
+[node name="start" type="Node" parent="."]
+script = ExtResource("5_hiawh")
+
+[node name="Label" type="Label" parent="start"]
+z_index = 2
+offset_left = -489.0
+offset_top = -160.0
+offset_right = 489.0
+theme_override_colors/font_color = Color(8.230359e-06, 0.8379183, 0.2789771, 1)
+theme_override_colors/font_outline_color = Color(0.9999998, 0.08437645, 0.107100375, 1)
+theme_override_constants/outline_size = 50
+theme_override_fonts/font = ExtResource("4_nx2sv")
+theme_override_font_sizes/font_size = 160
+text = "Ready?"
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="start/Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.672
+anchor_right = 0.5
+anchor_bottom = 1.672
+offset_left = -224.0
+offset_top = -107.52002
+offset_right = 224.0
+offset_bottom = 107.47998
+theme_override_colors/font_color = Color(0.7997384, 0.16414052, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.96750623, 0.90189254, 0, 1)
+theme_override_colors/font_hover_color = Color(0.6692026, 0.00357804, 0.9686751, 1)
+theme_override_colors/font_outline_color = Color(1.1070073e-06, 0.47516948, 0.2110736, 1)
+theme_override_constants/outline_size = 40
+theme_override_fonts/font = ExtResource("4_nx2sv")
+theme_override_font_sizes/font_size = 160
+text = "GO!"
+
 [connection signal="timeout" from="spawner/Timer" to="spawner" method="_on_timer_timeout"]
 [connection signal="area_entered" from="Area2D" to="spawner" method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="timeandscore/Timer" to="timeandscore" method="_on_timer_timeout"]
+[connection signal="timeout" from="timeandscore/Timer" to="timeandscore/Timer" method="_on_timeout"]
+[connection signal="pressed" from="start/Label/Button" to="start" method="_on_button_pressed"]

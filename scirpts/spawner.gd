@@ -20,10 +20,14 @@ var min_y := -410
 var max_y := -260
 
 func _on_timer_timeout():
+	if not Global.started:
+		return
 	spawn_ornament()
 
 # in the name of the function I don't know why you want to look at this comment anyways hi
 func spawn_ornament():
+	if not Global.started:
+		return
 	var ornament_scene = ornaments.pick_random()
 	var ornament = ornament_scene.instantiate()
 	

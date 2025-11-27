@@ -7,7 +7,8 @@ const JUMP_VELOCITY = -1000
 @onready var catani = $catani
 
 func _physics_process(delta):
-	# Add the gravity.
+	if not Global.started:
+		return
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
@@ -22,6 +23,8 @@ func _physics_process(delta):
 			catani.play("idle")
 		else:
 			catani.play("walking")
+	else:
+		catani.play("jump")
 	
 	if direction > 0:
 		catani.flip_h = false
