@@ -22,6 +22,7 @@ Global="*res://scirpts/globalvars.gd"
 [display]
 
 window/size/mode=2
+window/stretch/mode="canvas_items"
 
 [input]
 

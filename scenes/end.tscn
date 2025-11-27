@@ -1,0 +1,128 @@
+[gd_scene load_steps=12 format=3 uid="uid://cstbndsw176s2"]
+
+[ext_resource type="FontFile" uid="uid://b5566bcqt5awo" path="res://Godot assests/fonts/PixelOperator8-Bold.ttf" id="1_3d26k"]
+[ext_resource type="Texture2D" uid="uid://cab41v6im3vji" path="res://Godot assests/sprites/star.png" id="1_mwn6m"]
+[ext_resource type="Script" uid="uid://b5sujb4fyeh0f" path="res://scirpts/end.gd" id="1_p7m4f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3d26k"]
+atlas = ExtResource("1_mwn6m")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p7m4f"]
+atlas = ExtResource("1_mwn6m")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvfni"]
+atlas = ExtResource("1_mwn6m")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s4tl2"]
+atlas = ExtResource("1_mwn6m")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8hmjt"]
+atlas = ExtResource("1_mwn6m")
+region = Rect2(128, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o5lv4"]
+atlas = ExtResource("1_mwn6m")
+region = Rect2(160, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ee763"]
+atlas = ExtResource("1_mwn6m")
+region = Rect2(192, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nl5ow"]
+animations = [{
+"frames": [{
+"duration": 10.0,
+"texture": SubResource("AtlasTexture_3d26k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p7m4f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bvfni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s4tl2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8hmjt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o5lv4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ee763")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="end" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p7m4f")
+
+[node name="Label" type="Label" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 39.0
+offset_top = 39.0
+offset_right = 1095.0
+offset_bottom = 167.0
+theme_override_colors/font_color = Color(0.8332585, 0.17204681, 9.62615e-08, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1.2032687e-07, 0.4868561, 0.24942145, 1)
+theme_override_constants/outline_size = 50
+theme_override_constants/shadow_outline_size = 75
+theme_override_fonts/font = ExtResource("1_3d26k")
+theme_override_font_sizes/font_size = 128
+text = "Finished!"
+autowrap_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0.97419995, 0.4233408, 1)
+
+[node name="1star" type="AnimatedSprite2D" parent="."]
+position = Vector2(170, 318)
+scale = Vector2(15, 15)
+sprite_frames = SubResource("SpriteFrames_nl5ow")
+frame = 6
+frame_progress = 1.0
+
+[node name="2star" type="AnimatedSprite2D" parent="."]
+position = Vector2(565, 318.00003)
+scale = Vector2(15, 15)
+sprite_frames = SubResource("SpriteFrames_nl5ow")
+frame = 6
+frame_progress = 1.0
+
+[node name="3star" type="AnimatedSprite2D" parent="."]
+position = Vector2(960, 318)
+scale = Vector2(15, 15)
+sprite_frames = SubResource("SpriteFrames_nl5ow")
+frame = 6
+frame_progress = 1.0
+
+[node name="collected" type="Label" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 449.0
+offset_right = 1151.0
+offset_bottom = 529.0
+theme_override_colors/font_color = Color(0, 0.46937644, 0.8020315, 1)
+theme_override_colors/font_outline_color = Color(0.964068, 0.67539215, 1.1551381e-06, 1)
+theme_override_constants/outline_size = 25
+theme_override_fonts/font = ExtResource("1_3d26k")
+theme_override_font_sizes/font_size = 64
+text = "orn collect:"
