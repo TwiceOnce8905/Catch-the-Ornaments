@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*res://scirpts/globalvars.gd"
+jinglebells="*res://scenes/audio_stream_player.tscn"
+GlobalCanvasLayer="*res://scenes/canvas_layer.tscn"
 
 [display]
 
@@ -51,3 +53,5 @@ space={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

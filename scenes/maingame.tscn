@@ -1,13 +1,15 @@
-[gd_scene load_steps=13 format=3 uid="uid://dnxxerdgvfalu"]
+[gd_scene load_steps=15 format=3 uid="uid://dnxxerdgvfalu"]
 
 [ext_resource type="PackedScene" uid="uid://bxfon8htgq3nt" path="res://scenes/cat.tscn" id="1_i8va4"]
 [ext_resource type="Script" uid="uid://vlvgc4v4jeb1" path="res://scirpts/spawner.gd" id="1_jxvlb"]
+[ext_resource type="Texture2D" uid="uid://ymchhfs0dg27" path="res://Godot assests/sprites/image.png" id="1_r5jia"]
 [ext_resource type="Script" uid="uid://cauw37gp4x5g3" path="res://scirpts/timeandscore.gd" id="3_nx2sv"]
 [ext_resource type="FontFile" uid="uid://b5566bcqt5awo" path="res://Godot assests/fonts/PixelOperator8-Bold.ttf" id="4_nx2sv"]
 [ext_resource type="Script" uid="uid://bxp8tklktwix7" path="res://scirpts/start.gd" id="5_hiawh"]
 [ext_resource type="Texture2D" uid="uid://dikpfvajp1cr1" path="res://Godot assests/sprites/CLASSIC_TREE_SMALL.png" id="6_460fr"]
 [ext_resource type="Texture2D" uid="uid://dk2dirlqmdthk" path="res://Godot assests/sprites/TWITCH_TREE_SMALL.png" id="7_r5jia"]
 [ext_resource type="Texture2D" uid="uid://dy7ph7bl6tajk" path="res://Godot assests/sprites/PINK_TREE_SMALL.png" id="8_n6p2k"]
+[ext_resource type="Texture2D" uid="uid://ddv65xld7b3tg" path="res://Godot assests/sprites/bridge.png" id="10_n6p2k"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7h15q"]
 
@@ -20,13 +22,19 @@
 [node name="maingame" type="Node2D"]
 position = Vector2(966, 542)
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -5
+position = Vector2(5.9999847, -110.000015)
+scale = Vector2(6.5, 6.5)
+texture = ExtResource("1_r5jia")
+
 [node name="walls" type="Node" parent="."]
 
 [node name="floor" type="StaticBody2D" parent="walls"]
 position = Vector2(966, 542)
 
 [node name="floorcoll" type="CollisionShape2D" parent="walls/floor"]
-position = Vector2(2, 554)
+position = Vector2(2, 541)
 shape = SubResource("WorldBoundaryShape2D_7h15q")
 
 [node name="wallr" type="StaticBody2D" parent="walls"]
@@ -53,7 +61,7 @@ wait_time = 0.25
 autostart = true
 
 [node name="cat" parent="." instance=ExtResource("1_i8va4")]
-position = Vector2(-3, 561)
+position = Vector2(-2, 540)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 z_index = 3
@@ -107,6 +115,7 @@ autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="start/Label"]
+z_index = 2
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -126,6 +135,28 @@ theme_override_fonts/font = ExtResource("4_nx2sv")
 theme_override_font_sizes/font_size = 160
 text = "GO!"
 metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="start"]
+offset_left = 3.0
+offset_top = 498.0
+offset_right = 597.0
+offset_bottom = 1076.0
+theme_override_colors/font_color = Color(1, 0.3668105, 0.694285, 1)
+theme_override_fonts/font = ExtResource("4_nx2sv")
+theme_override_font_sizes/font_size = 80
+text = "A and D or <-- and --> to move left and right"
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="start"]
+offset_left = 1271.0
+offset_top = 909.0
+offset_right = 1865.0
+offset_bottom = 1487.0
+theme_override_colors/font_color = Color(1, 0.3668105, 0.694285, 1)
+theme_override_fonts/font = ExtResource("4_nx2sv")
+theme_override_font_sizes/font_size = 80
+text = "Spacebar to jump"
+autowrap_mode = 2
 
 [node name="Node" type="Node" parent="."]
 
@@ -212,6 +243,12 @@ z_index = -1
 position = Vector2(1623.9999, 187.99998)
 scale = Vector2(5, 5)
 texture = ExtResource("8_n6p2k")
+
+[node name="Sprite2D16" type="Sprite2D" parent="Node"]
+z_index = -2
+position = Vector2(979.00006, 367)
+scale = Vector2(12.862499, 6)
+texture = ExtResource("10_n6p2k")
 
 [node name="Sprite2D15" type="Sprite2D" parent="Node"]
 z_index = -1

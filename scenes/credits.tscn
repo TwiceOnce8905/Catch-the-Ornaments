@@ -1,0 +1,139 @@
+[gd_scene load_steps=3 format=3 uid="uid://bj8h8bu04xl8m"]
+
+[ext_resource type="Texture2D" uid="uid://dbohm4y1cl8dq" path="res://Godot assests/sprites/greenornbigforcredits.png" id="1_2ckv8"]
+[ext_resource type="FontFile" uid="uid://b5566bcqt5awo" path="res://Godot assests/fonts/PixelOperator8-Bold.ttf" id="2_0ctdu"]
+
+[node name="credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.67647266, 0.9342145, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(568, 245)
+texture = ExtResource("1_2ckv8")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 7.0
+offset_right = 444.0
+offset_bottom = 170.0
+theme_override_colors/font_color = Color(0.5876282, 0.0042759357, 0.99635965, 1)
+theme_override_colors/font_outline_color = Color(0.92946035, 0.96117526, 0, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("2_0ctdu")
+theme_override_font_sizes/font_size = 56
+text = "Thank 
+You"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 747.0
+offset_top = 16.0
+offset_right = 1327.0
+offset_bottom = 179.0
+theme_override_colors/font_color = Color(0.5876282, 0.0042759357, 0.99635965, 1)
+theme_override_colors/font_outline_color = Color(0.92946035, 0.96117526, 0, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("2_0ctdu")
+theme_override_font_sizes/font_size = 56
+text = "For
+Playing!"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 365.0
+offset_top = 181.0
+offset_right = 945.0
+offset_bottom = 344.0
+theme_override_colors/font_color = Color(0.97653216, 0, 0.30407265, 1)
+theme_override_colors/font_outline_color = Color(0.5515878, 0.0025886644, 0.82302964, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("2_0ctdu")
+theme_override_font_sizes/font_size = 56
+text = "Credits:"
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 443.0
+offset_top = 253.0
+offset_right = 1023.0
+offset_bottom = 416.0
+theme_override_colors/font_color = Color(0.97653216, 0, 0.30407265, 1)
+theme_override_colors/font_outline_color = Color(0.5515878, 0.0025886644, 0.82302964, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("2_0ctdu")
+theme_override_font_sizes/font_size = 28
+text = "TwiceOnce"
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 295.0
+offset_right = 860.0
+offset_bottom = 458.0
+theme_override_colors/font_color = Color(0.97653216, 0, 0.30407265, 1)
+theme_override_colors/font_outline_color = Color(0.5515878, 0.0025886644, 0.82302964, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("2_0ctdu")
+theme_override_font_sizes/font_size = 28
+text = "Tim Beek
+(Music)"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="."]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 295.0
+offset_right = 860.0
+offset_bottom = 458.0
+theme_override_colors/font_color = Color(0.97653216, 0, 0.30407265, 1)
+theme_override_colors/font_outline_color = Color(0.5515878, 0.0025886644, 0.82302964, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("2_0ctdu")
+theme_override_font_sizes/font_size = 28
+text = "Tim Beek
+(Music)"
+horizontal_alignment = 1
+
+[node name="Label8" type="Label" parent="."]
+layout_mode = 0
+offset_left = 276.0
+offset_top = 374.0
+offset_right = 856.0
+offset_bottom = 537.0
+theme_override_colors/font_color = Color(0.97653216, 0, 0.30407265, 1)
+theme_override_colors/font_outline_color = Color(0.5515878, 0.0025886644, 0.82302964, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("2_0ctdu")
+theme_override_font_sizes/font_size = 28
+text = "Bow.Pixel
+(Cat Art)"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="."]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 456.0
+offset_right = 861.0
+offset_bottom = 619.0
+theme_override_colors/font_color = Color(0.97653216, 0, 0.30407265, 1)
+theme_override_colors/font_outline_color = Color(0.5515878, 0.0025886644, 0.82302964, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("2_0ctdu")
+theme_override_font_sizes/font_size = 28
+text = "Thank you 
+for playing!"
+horizontal_alignment = 1

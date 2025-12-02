@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bad6fsaf4x5jf"]
+
+[ext_resource type="AudioStream" uid="uid://wsvpjtu0a4tn" path="res://Godot assests/music/jingle-bells-8bit.mp3" id="1_nbeep"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_nbeep")
+autoplay = true

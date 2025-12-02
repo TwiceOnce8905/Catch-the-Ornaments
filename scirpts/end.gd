@@ -51,3 +51,6 @@ func count_up_score():
 			score_done = true
 	if score_done:
 		$Button.visible = true
+		
+func _on_button_pressed():
+	GlobalCanvasLayer.fade("res://scenes/credits.tscn")

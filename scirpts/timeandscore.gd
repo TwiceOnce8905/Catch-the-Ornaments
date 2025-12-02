@@ -11,7 +11,7 @@ func _process(delta):
 		$Timer/Label.visible = true
 		timer.start()
 		timer_started = true
-	$Timer/Label.text = "⏱️: " + str(snapped(timer.time_left, 0))
+	$Timer/Label.text = "Time Left: " + str(snapped(timer.time_left, 0))
 
 func _on_timer_timeout():
 	print(Global.score)
