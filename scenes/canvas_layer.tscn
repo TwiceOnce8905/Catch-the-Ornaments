@@ -2,22 +2,6 @@
 
 [ext_resource type="Script" uid="uid://c6xn5scnxc6aj" path="res://scirpts/canvas_layer.gd" id="1_c4rma"]
 
-[sub_resource type="Animation" id="Animation_ghj5q"]
-resource_name = "fade_out"
-length = 2.55
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.3, 2.4, 2.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(0, 0, 0, 0.039215688), Color(0, 0, 0, 0.078431375), Color(0, 0, 0, 0.11764706), Color(0, 0, 0, 0.15686275), Color(0, 0, 0, 0.19607843), Color(0, 0, 0, 0.23529412), Color(0, 0, 0, 0.27450982), Color(0, 0, 0, 0.3137255), Color(0, 0, 0, 0.3529412), Color(0, 0, 0, 0.39215687), Color(0, 0, 0, 0.43137255), Color(0, 0, 0, 0.47058824), Color(0, 0, 0, 0.50980395), Color(0, 0, 0, 0.54901963), Color(0, 0, 0, 0.5882353), Color(0, 0, 0, 0.627451), Color(0, 0, 0, 0.6666667), Color(0, 0, 0, 0.7058824), Color(0, 0, 0, 0.74509805), Color(0, 0, 0, 0.78431374), Color(0, 0, 0, 0.8235294), Color(0, 0, 0, 0.8627451), Color(0, 0, 0, 0.9019608), Color(0, 0, 0, 0.9019608), Color(0, 0, 0, 1)]
-}
-
 [sub_resource type="Animation" id="Animation_ek3oe"]
 length = 2.55
 tracks/0/type = "value"
@@ -35,7 +19,6 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_mg525"]
 resource_name = "fade_in"
-length = 2.55
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -43,10 +26,25 @@ tracks/0/path = NodePath("ColorRect:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.3, 2.4, 2.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0.98039216), Color(0, 0, 0, 0.9411765), Color(0, 0, 0, 0.9019608), Color(0, 0, 0, 0.8627451), Color(0, 0, 0, 0.8235294), Color(0, 0, 0, 0.78431374), Color(0, 0, 0, 0.74509805), Color(0, 0, 0, 0.7058824), Color(0, 0, 0, 0.6666667), Color(0, 0, 0, 0.627451), Color(0, 0, 0, 0.5882353), Color(0, 0, 0, 0.54901963), Color(0, 0, 0, 0.50980395), Color(0, 0, 0, 0.47058824), Color(0, 0, 0, 0.43137255), Color(0, 0, 0, 0.39215687), Color(0, 0, 0, 0.3529412), Color(0, 0, 0, 0.3137255), Color(0, 0, 0, 0.27450982), Color(0, 0, 0, 0.23529412), Color(0, 0, 0, 0.19607843), Color(0, 0, 0, 0.15686275), Color(0, 0, 0, 0.11764706), Color(0, 0, 0, 0.078431375), Color(0, 0, 0, 0.039215688), Color(0, 0, 0, 0)]
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0.78431374), Color(0, 0, 0, 0.6862745), Color(0, 0, 0, 0.5882353), Color(0, 0, 0, 0.49019608), Color(0, 0, 0, 0.39215687), Color(0, 0, 0, 0.29411766), Color(0, 0, 0, 0.19607843), Color(0, 0, 0, 0.09803922), Color(0, 0, 0, 0.019607844), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ghj5q"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 0.09803922), Color(1, 1, 1, 0.19607843), Color(1, 1, 1, 0.29411766), Color(1, 1, 1, 0.39215687), Color(1, 1, 1, 0.49019608), Color(1, 1, 1, 0.5882353), Color(1, 1, 1, 0.6862745), Color(1, 1, 1, 0.78431374), Color(0, 0, 0, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kfwc7"]
